@@ -1,0 +1,17 @@
+apiVersion: route.openshift.io/v1
+kind: Route
+metadata:
+  name: {{ .Release.Name }}-moodle
+spec:
+  host: {{ .Values.URL }}
+  port:
+    targetPort: "80"
+  tls:
+    insecureEdgeTerminationPolicy: Redirect
+    termination: edge
+  to:
+    kind: Service
+    name: {{ .Release.Name }}-moodle
+    weight: 100
+  wildcardPolicy: None
+status: {}
