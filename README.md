@@ -19,7 +19,9 @@ For more information, like the list of available variables visit:
 
 ### Quick start
 
-Review and edit the file `k8s/moodle/values.yaml`. Then install the application by:
+Review and edit the file `k8s/moodle/values.yaml`. [Install the HELM client](https://helm.sh/docs/intro/install/).
+
+Then install the application by:
 
 ```bash
 helm install release_name k8s/moodle
