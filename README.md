@@ -26,3 +26,10 @@ Then install the application by:
 ```bash
 helm install release_name k8s/moodle
 ```
+
+### Uninstall
+
+```bash
+helm uninstall release_name
+```
+
